@@ -167,3 +167,44 @@ body {
   letter-spacing: 0;
   line-height: 1.8;
 }
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+nav,
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.top-nav {
+  padding: 1rem;
+}
+nav {
+  align-items: center;
+  width: 60%;
+  max-width: 300px;
+}
+nav a {
+  color: #212529;
+  text-decoration: none;
+  font-size: 1rem;
+}
+header {
+  display: flex;
+  min-height: 100vh;
+  text-align: center;
+  justify-content: center;
+  background-image: url("/img/cloud-bkg-small.png");
+  background-size: cover;
+}
+.header-box {
+  max-width: 50%;
+  margin-top: 10%;
+  padding: 2rem;
+}
+.header-box p {
+  padding: 2rem;
+}
