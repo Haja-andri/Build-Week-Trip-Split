@@ -331,6 +331,9 @@ section.testimonials {
   display: flex;
   border-radius: .8rem;
   min-width: 100%;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }  
 }
 
 .testimonial-photo {
@@ -340,6 +343,12 @@ section.testimonials {
   border-bottom-left-radius: 1rem;
   min-width: 60%;
   min-height: 300px;
+  @media screen and (max-width: 900px) {
+    background-image: url("/img/testimonials/lucy-small.png"); 
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    }    
 }
 
 .testimonial-text {
@@ -352,6 +361,11 @@ section.testimonials {
   min-height: 300px;  
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;  
+  @media screen and (max-width: 900px) {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    }     
 }
 
 .faqs {
