@@ -250,15 +250,15 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 3rem;
-  padding-right: 3rem;
   padding-top: 3rem;
   align-items: center;
+  border: 1px solid red;
   /* On screens that are 600px or less change the box width */
 }
 .row .description,
 .row .illustration {
   width: 40%;
+  border: 1px solid green;
 }
 .row .description span,
 .row .illustration span {
@@ -269,10 +269,8 @@ button {
 .row .illustration p {
   padding-bottom: 2.2rem;
 }
-.row .illustration {
-  text-align: center;
-}
 .row .illustration img {
+  margin: 0 auto;
   width: 70%;
   height: auto;
   min-height: 350px;
@@ -285,16 +283,17 @@ button {
 @media screen and (max-width: 900px) {
   .row {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    padding-left: 0rem;
   }
   .row .description,
   .row .illustration {
     width: 100%;
+    border: 1px solid red;
   }
   .row .description img,
   .row .illustration img {
-    width: 50%;
+    max-width: 40%;
   }
 }
 .row.hide {
@@ -325,9 +324,6 @@ button {
   .box {
     width: 100%;
   }
-  .box p {
-    font-size: 1.4rem;
-  }
 }
 .row.first,
 .row.inter {
@@ -338,7 +334,6 @@ button {
 }
 section {
   padding-bottom: 3rem;
-  padding-left: 3rem;
 }
 section h1 {
   color: coral;
@@ -364,7 +359,7 @@ section.testimonials h1 {
 .testimonial-container {
   display: flex;
   border-radius: 0.8rem;
-  min-width: 100%;
+  max-width: 90%;
 }
 @media screen and (max-width: 900px) {
   .testimonial-container {
@@ -405,20 +400,27 @@ section.testimonials h1 {
     border-bottom-left-radius: 1rem;
   }
 }
-.faqs {
+section.faqs {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  border: 1px solid blue;
+  width: 100%;
 }
-.faqs p {
+section.faqs p {
   padding-bottom: 1rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-bottom: 1rem;
   background-color: #FFEFBA;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  width: 100%;
 }
-.faqs h3 {
+section.faqs h3 {
   border: 1px solid #FFEFBA;
   padding: 1rem;
+  width: 100%;
 }
