@@ -182,6 +182,7 @@ html, body {
 
 .row {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -191,19 +192,19 @@ html, body {
     width: 40%;
     p {
       padding-top: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: #23293B;
     }
     span {
       padding-right: .5rem;
-      color: orangered;
+      color: coral;
     }
   } 
 }
 
 .box{
   flex-direction: column;
-  background-color: aliceblue;
+  background-color: lightgoldenrodyellow;
   border-radius: .3rem;
   margin: .5rem;
   .description, .illustration {
@@ -222,12 +223,49 @@ html, body {
   padding-top: 3rem;
 }
 
-
-
 section {
   padding-bottom: 3rem;
 }
 
 section.how{
   background-color: lightgreen;
+}
+
+section.testimonials {
+  background-color: coral;
+  h1 {
+    color: white;
+  }
+}
+.testimonial-container {
+  display: flex;
+  border-radius: .8rem;
+}
+
+.testimonial-photo {
+  background-image: url("/img/testimonials/lucy-large.png"); 
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  min-width: 500px;
+  min-height: 300px;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 3rem;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 300px;  
+
+  p {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    color: #23293B;
+  }
 }
