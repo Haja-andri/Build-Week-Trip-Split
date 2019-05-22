@@ -237,7 +237,25 @@ button {
   height: auto;
   min-height: 350px;
   min-width: 250px;
+  display: none;
   } 
+  img.show {
+    display: block;
+  }
+
+  /* On screens that are 600px or less change the box width */
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .description, .illustration {
+      width: 100%;
+      img {
+        width: 50%;
+        }       
+    }    
+  }
+
 }
 
 .row.hide {
@@ -264,6 +282,13 @@ button {
       height: auto;
       } 
   }
+  
+  @media screen and (max-width: 900px) {
+      width: 100%;    
+      p {
+        font-size: 1.4rem;
+      }
+  }  
 }
 
 .row.first, .row.inter{

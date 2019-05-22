@@ -212,6 +212,11 @@ header {
   background-image: url("/img/cloud-small-2.png");
   background-size: cover;
 }
+@media screen and (max-width: 900px) {
+  header {
+    min-height: 60vh;
+  }
+}
 .header-box {
   max-width: 600px;
   margin-top: 10%;
@@ -249,6 +254,7 @@ button {
   padding-right: 3rem;
   padding-top: 3rem;
   align-items: center;
+  /* On screens that are 600px or less change the box width */
 }
 .row .description,
 .row .illustration {
@@ -271,6 +277,25 @@ button {
   height: auto;
   min-height: 350px;
   min-width: 250px;
+  display: none;
+}
+.row img.show {
+  display: block;
+}
+@media screen and (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .row .description,
+  .row .illustration {
+    width: 100%;
+  }
+  .row .description img,
+  .row .illustration img {
+    width: 50%;
+  }
 }
 .row.hide {
   display: none;
@@ -295,6 +320,14 @@ button {
 .box .icon img {
   width: 35%;
   height: auto;
+}
+@media screen and (max-width: 900px) {
+  .box {
+    width: 100%;
+  }
+  .box p {
+    font-size: 1.4rem;
+  }
 }
 .row.first,
 .row.inter {
