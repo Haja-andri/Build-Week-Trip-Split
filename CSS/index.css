@@ -150,13 +150,13 @@ h5 {
   text-transform: normal;
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 h3 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 p {
   font-size: 1.6rem;
@@ -190,14 +190,14 @@ nav {
 nav a {
   color: #212529;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 header {
   display: flex;
   min-height: 100vh;
   text-align: center;
   justify-content: center;
-  background-image: url("/img/cloud-bkg-small.png");
+  background-image: url("/img/cloud-small-2.png");
   background-size: cover;
 }
 .header-box {
@@ -207,4 +207,53 @@ header {
 }
 .header-box p {
   padding: 2rem;
+}
+/*General styling*/
+.row {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+}
+.row .description,
+.row .illustration {
+  width: 40%;
+}
+.row .description p,
+.row .illustration p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: #23293B;
+}
+.row .description span,
+.row .illustration span {
+  padding-right: 0.5rem;
+  color: orangered;
+}
+.box {
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 0.3rem;
+  margin: 0.5rem;
+}
+.box .description,
+.box .illustration {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.row.first,
+.row.inter {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+.row.inter {
+  padding-top: 3rem;
+}
+section {
+  padding-bottom: 3rem;
+}
+section.how {
+  background-color: lightgreen;
 }
