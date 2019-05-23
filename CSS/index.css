@@ -28,10 +28,6 @@
   font-weight: 400;
   src: local('Muli Regular'), local('Muli-Regular'), url(https://fonts.gstatic.com/s/muli/v13/7Auwp_0qiz-afTLGKA.ttf) format('truetype');
 }
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html,
 body,
 div,
@@ -213,8 +209,6 @@ nav,
   max-width: 600px;
   margin: 0 auto;
 }
-@media screen and (max-width: 900px) {
-}
 .top-nav {
   padding: 2rem;
 }
@@ -229,26 +223,6 @@ nav,
 @media screen and (max-width: 480px) {
   .top-nav-mob {
     display: block;
-    /*
-  * Just a quick hamburger
-  */
-    /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-    /*
-  * But let's hide the middle one.
-  */
-    /*
-  * Ohyeah and the last one should go the other direction
-  */
-    /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
-    /*
-  * And let's slide it in from the left
-  */
   }
   .top-nav-mob a {
     text-decoration: none;
@@ -279,9 +253,7 @@ nav,
     left: -5px;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
     -webkit-touch-callout: none;
   }
   .top-nav-mob #menuToggle span {
@@ -435,10 +407,10 @@ section.team-cards .card {
   justify-content: space-between;
   align-items: none;
   flex-direction: column;
-  background-color: #FFEFBA;
+  background-color: white;
   width: 380px;
   margin-bottom: 16px;
-  padding: 4px;
+  padding: 1px;
   border: 3px solid white;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
@@ -499,6 +471,7 @@ section.team-cards .card .detail span {
   font-weight: bold;
   color: #666666;
 }
+/*General styling*/
 .main-container {
   width: 100%;
   margin: 0 auto;
@@ -509,7 +482,6 @@ section.team-cards .card .detail span {
   background: linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FFEFBA);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/*General styling*/
 .content {
   background-color: #ffffe0;
   width: 80%;

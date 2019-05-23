@@ -1,6 +1,7 @@
 /// Team cards section of about page ///
 
 section.team-cards {
+    // call to some mixins here
     .flex(space-evenly);
     .width-100();
     margin-top: 16px;
@@ -8,10 +9,10 @@ section.team-cards {
   
     .card {
       .flex(space-between, none, column);
-      background-color: @tertiary-color;
+      background-color: white;
       width: 380px;
       margin-bottom: 16px;
-      padding: 4px;
+      padding: 1px;
       border:3px solid white;
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;    
@@ -21,6 +22,7 @@ section.team-cards {
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;      
       }
+      /// set each team member photo ///
       .photo.john {
         background-image: url("/img/team/john.jpg");
       }
@@ -48,7 +50,6 @@ section.team-cards {
       .photo.luna {
         background-image: url("/img/team/luna.jpg");
       }        
-  
       .detail {
         .flex(center, center);
         background-color: @tertiary-color;

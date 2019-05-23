@@ -1,3 +1,7 @@
+/// This script will filter the team members to be 
+/// displayed based on the filter sected
+
+
 class FilterLink {
   constructor(filterElement){
     // assign this.filterElement to the filterElement DOM reference
@@ -7,7 +11,7 @@ class FilterLink {
     // Get the `data-tab` value from this.filterElement and store it here
     this.filterData = this.filterElement.dataset.tab; 
 
-    // We need to find out if a user clicked 'all' cards or a specific category.  
+    // If a user clicked 'all' cards or a specific category.  
     // Add a click event that invokes this.selectFilter
     this.filterElement.addEventListener('click', this.selectFilter.bind(this));
   }
