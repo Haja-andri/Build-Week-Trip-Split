@@ -7,6 +7,11 @@
     <title>Trip-Split</title>
 	<!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
+	<!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="./components/Works/Works.js" async></script>
+
 </head>
 <body>
 <div class="main-container">
@@ -51,7 +56,7 @@
             </div>
               <div class="header-box">
                 <h1>Organize expenses with your friends</h1>
-                <p>Make sharing expenses simple for travel, activities and daily life.</p>
+                <p>Make sharing expenses simple for travel, activities and daily life. Just fill in the costs - and let the app do the maths for you.</p>
                 <button class="sign-up">Sign-up</button>        
         </div>
     </header>
@@ -63,18 +68,24 @@
                 <h1>How it Works</h1>
         </div>
         <div class="row">
-            <div class="description">
-                <h2><span>01.</span> Add your expenses</h2>
-                <p>Enter the type of expense you are logging in Tricount. It could be tickets, food, fuel, shopping, or anything else.</p> 
-                <h2><span>02.</span> Check your balance</h2>
-                <p>View your balance at any time. With instant notifications, you’ll be updated whenever a group member adds, edits or deletes expenses.</p> 
-                <h2><span>03.</span> Square Up</h2>
-                <p>Let Trip-Split do the calculations - and determine who owes what. The app finds the most efficient way for everyone to pay each other what they owe.</p> 
+            <div class="description steps">
+                <div class="step">
+                    <h2><span>01.</span> Add your expenses</h2>
+                    <p>Enter the type of expense you are logging in Tricount. It could be tickets, food, fuel, shopping, or anything else.</p> 
+                </div>
+                <div class="step">
+                    <h2><span>02.</span> Check your balance</h2>
+                    <p>View your balance at any time. With instant notifications, you’ll be updated whenever a group member adds, edits or deletes expenses.</p> 
+                </div>
+                <div class="step">
+                    <h2><span>03.</span> Square Up</h2>
+                    <p>Let Trip-Split do the calculations - and determine who owes what. The app finds the most efficient way for everyone to pay each other what they owe.</p> 
+                </div>
             </div>            
-            <div class="illustration">
-                <img src="./img/illustrations/groups.png" alt="">
-                <img class="show" src="./img/illustrations/track-payment.png" alt="">
-                <img src="./img/illustrations/chat.png" alt="">
+            <div class="illustration steps">
+                <img class="show" src="./img/illustrations/groups.png" data-step="01." alt="">
+                <img src="./img/illustrations/track-payment.png" data-step="02." alt="">
+                <img src="./img/illustrations/chat.png" data-step="03." alt="">
             </div>    
         </div>
     </section>
