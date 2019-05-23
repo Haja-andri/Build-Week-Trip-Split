@@ -177,20 +177,23 @@ html, body {
 .main-container{
     width: 100%;
     margin: 0 auto;
-    background: #FFEFBA;  /* fallback for old browsers */
+    background: @tertiary-color;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
 
-@import './nav';
-@import './header';
-@import './mixins';
+@import './variables.less';
+@import './mixins.less';
+@import './nav.less';
+@import './header.less';
+@import './Components/Filter/filter';
+
 
 /*General styling*/
 
 .content{
-  background-color: lightyellow;
+  background-color: #ffffe0;
   width: 80%;
   margin: 0 auto;
   border-top-right-radius: 3rem;
@@ -208,7 +211,7 @@ html, body {
 }
 
 button {
-  background-color: coral;
+  background-color: @primary-color;
   padding: 1rem 3rem;
   border-radius: .5rem;
   color: white;
@@ -228,7 +231,7 @@ button {
     width: 40%;
     span {
       padding-right: .5rem;
-      color: #ff7f50;
+      color: @primary-color;
     }
     p {
       padding-bottom: 2.2rem;
@@ -337,7 +340,7 @@ button {
 section {
   padding-bottom: 3rem;
   h1 {
-    color: coral;
+    color: @primary-color;
   }
 }
 
@@ -348,13 +351,13 @@ section.how{
 }
 
 section.features{
-  background-color: lightgreen;
+  background-color:@secondary-color;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;  
 }
 
 section.testimonials {
-  background-color: coral;
+  background-color: @primary-color;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;   
   h1 {
@@ -450,18 +453,129 @@ section.faqs {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 1rem;
-    border: 2px solid #FFEFBA;
+    border: 2px solid @tertiary-color;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     width: 100%;
   }
   h3 {
     
-    background-color: #FFEFBA;
+    background-color: @tertiary-color;
     padding: 1rem;
     width: 100%;
   }
 }
 
+/// Filter section of about page ///
 
+section.filters{ 
+  padding-top: 3rem;
+  .flex(center, center);
+  .width-100();
+  height: 47px;
+  @media(min-width: 1280px){
+    width: 1280px;
+  }
+  .themes {
+    .flex(none, center);
+    .title {
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+    .filter {
+      .flex(none, center);
+      color: @primary-color;
+      margin: 0 5px;
+      padding: 2px 10px;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+        color: @secondary-color;
+        font-size: 1.3rem;
+      }
+    }
+    .active-filter{
+      color: @secondary-color;
+      font-size: 1.3rem;
+      text-decoration: underline;
+    }
+  }
+}
 
+/// Team cards section of about page ///
+
+section.team-cards {
+  .flex(space-evenly);
+  .width-100();
+  margin-top: 16px;
+  flex-wrap: wrap;
+
+  .person {
+    .flex(space-between, none, column);
+    background-color: @tertiary-color;
+    width: 380px;
+    margin-bottom: 16px;
+    padding: 4px;
+    border:3px solid white;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;    
+    .photo {
+      background-size: cover;
+      min-height: 300px;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;      
+    }
+    .photo.john {
+      background-image: url("/img/team/john.jpg");
+    }
+    .photo.sarah {
+      background-image: url("/img/team/sarah.jpg");
+    }
+    .photo.jack {
+      background-image: url("/img/team/jack.jpg");
+    }    
+    .photo.tim {
+      background-image: url("/img/team/tim.jpg");
+    }    
+    .photo.paul {
+      background-image: url("/img/team/paul.jpg");
+    }    
+    .photo.cally {
+      background-image: url("/img/team/cally.jpg");
+    }    
+    .photo.eva {
+      background-image: url("/img/team/eva.jpg");
+    }    
+    .photo.kara {
+      background-image: url("/img/team/kara.jpg");
+    }    
+    .photo.luna {
+      background-image: url("/img/team/luna.jpg");
+    }        
+
+    .detail {
+      .flex(center, center);
+      background-color: @tertiary-color;
+      .img-container {
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        height: 40px;
+        img {
+          width: 15px;
+        }
+      }
+      span {
+        padding-left: 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: #666666;
+      }
+    }
+  }
+}

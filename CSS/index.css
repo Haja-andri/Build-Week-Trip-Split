@@ -210,6 +210,12 @@ body {
   background: linear-gradient(to bottom, #FFFFFF, #FFFFFF, #FFEFBA);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+.width-100 {
+  width: 100%;
+}
+.border-bottom-grey {
+  border-bottom: 1px solid lightgrey;
+}
 nav,
 .top-nav,
 .top-nav-mob {
@@ -221,11 +227,6 @@ nav,
   margin: 0 auto;
 }
 @media screen and (max-width: 900px) {
-  nav,
-  .top-nav,
-  .top-nav-mob {
-    flex-direction: column;
-  }
 }
 .top-nav {
   padding: 2rem;
@@ -366,11 +367,15 @@ header {
   text-align: center;
   background-image: url("/img/cloud-small-2.png");
   background-size: cover;
+  margin-bottom: 2rem;
 }
 @media screen and (max-width: 900px) {
   header {
     min-height: 60vh;
   }
+}
+header.team-head {
+  background-image: url("/img/team/team-bkg.png");
 }
 .header-box {
   max-width: 600px;
@@ -383,7 +388,7 @@ header {
 }
 /*General styling*/
 .content {
-  background-color: lightyellow;
+  background-color: #ffffe0;
   width: 80%;
   margin: 0 auto;
   border-top-right-radius: 3rem;
@@ -644,4 +649,130 @@ section.faqs h3 {
   background-color: #FFEFBA;
   padding: 1rem;
   width: 100%;
+}
+section.filters {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 47px;
+}
+@media (min-width: 1280px) {
+  section.filters {
+    width: 1280px;
+  }
+}
+section.filters .themes {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+}
+section.filters .themes .title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+section.filters .themes .filter {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  color: #ff7f50;
+  margin: 0 5px;
+  padding: 2px 10px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+section.filters .themes .filter:hover {
+  text-decoration: none;
+  color: #90ee90;
+  font-size: 1.3rem;
+}
+section.filters .themes .active-filter {
+  color: #90ee90;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+section.team-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+section.team-cards .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  background-color: #FFEFBA;
+  width: 380px;
+  margin-bottom: 16px;
+  padding: 4px;
+  border: 3px solid white;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+section.team-cards .card .photo {
+  background-size: cover;
+  min-height: 300px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+section.team-cards .card .photo.john {
+  background-image: url("/img/team/john.jpg");
+}
+section.team-cards .card .photo.sarah {
+  background-image: url("/img/team/sarah.jpg");
+}
+section.team-cards .card .photo.jack {
+  background-image: url("/img/team/jack.jpg");
+}
+section.team-cards .card .photo.tim {
+  background-image: url("/img/team/tim.jpg");
+}
+section.team-cards .card .photo.paul {
+  background-image: url("/img/team/paul.jpg");
+}
+section.team-cards .card .photo.cally {
+  background-image: url("/img/team/cally.jpg");
+}
+section.team-cards .card .photo.eva {
+  background-image: url("/img/team/eva.jpg");
+}
+section.team-cards .card .photo.kara {
+  background-image: url("/img/team/kara.jpg");
+}
+section.team-cards .card .photo.luna {
+  background-image: url("/img/team/luna.jpg");
+}
+section.team-cards .card .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #FFEFBA;
+}
+section.team-cards .card .detail .img-container {
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 40px;
+}
+section.team-cards .card .detail .img-container img {
+  width: 15px;
+}
+section.team-cards .card .detail span {
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #666666;
 }
