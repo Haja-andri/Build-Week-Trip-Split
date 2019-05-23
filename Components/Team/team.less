@@ -1,0 +1,73 @@
+/// Team cards section of about page ///
+
+section.team-cards {
+    .flex(space-evenly);
+    .width-100();
+    margin-top: 16px;
+    flex-wrap: wrap;
+  
+    .card {
+      .flex(space-between, none, column);
+      background-color: @tertiary-color;
+      width: 380px;
+      margin-bottom: 16px;
+      padding: 4px;
+      border:3px solid white;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;    
+      .photo {
+        background-size: cover;
+        min-height: 300px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;      
+      }
+      .photo.john {
+        background-image: url("/img/team/john.jpg");
+      }
+      .photo.sarah {
+        background-image: url("/img/team/sarah.jpg");
+      }
+      .photo.jack {
+        background-image: url("/img/team/jack.jpg");
+      }    
+      .photo.tim {
+        background-image: url("/img/team/tim.jpg");
+      }    
+      .photo.paul {
+        background-image: url("/img/team/paul.jpg");
+      }    
+      .photo.cally {
+        background-image: url("/img/team/cally.jpg");
+      }    
+      .photo.eva {
+        background-image: url("/img/team/eva.jpg");
+      }    
+      .photo.kara {
+        background-image: url("/img/team/kara.jpg");
+      }    
+      .photo.luna {
+        background-image: url("/img/team/luna.jpg");
+      }        
+  
+      .detail {
+        .flex(center, center);
+        background-color: @tertiary-color;
+        .img-container {
+          padding-right: 10px;
+          padding-top: 10px;
+          padding-left: 10px;
+          height: 40px;
+          img {
+            width: 15px;
+          }
+        }
+        span {
+          padding-left: 10px;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-weight: bold;
+          color: #666666;
+        }
+      }
+    }
+  }
