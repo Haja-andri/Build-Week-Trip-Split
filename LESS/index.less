@@ -363,7 +363,9 @@ section.testimonials {
 }
 
 .testimonial-photo {
-  background-image: url("/img/testimonials/lucy-large.png"); 
+  display: flex;
+  align-items: center;
+  padding-left: 1rem; 
   background-size: cover;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -379,21 +381,60 @@ section.testimonials {
     }    
 }
 
+.testimonial-photo.lucy {
+  background-image: url("/img/testimonials/lucy-large.png");
+  @media screen and (max-width: 900px) {
+    background-image: url("/img/testimonials/lucy-small.png"); 
+  }
+}
+
+.testimonial-photo.marc {
+  background-image: url("/img/testimonials/marc-large.png");
+  @media screen and (max-width: 900px) {
+    background-image: url("/img/testimonials/marc-small.png"); 
+  }
+}
+
+.testimonial-photo.luc {
+  background-image: url("/img/testimonials/luc-large.png");
+  @media screen and (max-width: 900px) {
+    background-image: url("/img/testimonials/luc-small.png"); 
+  }
+}
+
 .testimonial-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: white;
   padding: 3rem;
-  min-width: 40%;
-  min-height: 300px;  
+  max-width: 90%;
+  min-height: 300px;   
+  @media screen and (max-width: 900px) {
+    // border-top-left-radius: 0rem;
+    // border-top-right-radius: 0rem;
+    // border-bottom-left-radius: 1rem;
+    max-width: 100%;
+    }     
+}
+
+.testimonial-desc {
+  display: flex;
+  align-items: center;
+  background-color: white;
   border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;  
+  border-bottom-right-radius: 1rem; 
   @media screen and (max-width: 900px) {
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
-    border-bottom-left-radius: 1rem;
-    }     
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    }       
+}
+
+.left-arrow img {
+  width:25px;
+  height:25px;  
 }
 
 section.faqs {
