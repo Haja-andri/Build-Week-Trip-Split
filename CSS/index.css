@@ -396,6 +396,9 @@ header {
     padding: 0.5rem;
   }
 }
+.line {
+  height: 1px;
+}
 button {
   background-color: coral;
   padding: 1rem 3rem;
@@ -420,7 +423,7 @@ button {
 .row .description span,
 .row .illustration span {
   padding-right: 0.5rem;
-  color: coral;
+  color: #ff7f50;
 }
 .row .description p,
 .row .illustration p {
@@ -451,6 +454,35 @@ button {
   .row .illustration img {
     max-width: 40%;
   }
+}
+.overflow {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+}
+.overflow .testimonial-container {
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .overflow .testimonial-container {
+    flex-direction: column;
+  }
+}
+.overflow .testimonial-container.testimonial-container:not(:last-of-type) {
+  margin-right: 12px;
+}
+.overflow::after {
+  content: '';
+  flex: 0 0 12px;
 }
 .row.hide {
   display: none;
@@ -513,16 +545,6 @@ section.testimonials {
 section.testimonials h1 {
   color: lightgoldenrodyellow;
 }
-.testimonial-container {
-  display: flex;
-  border-radius: 0.8rem;
-  max-width: 90%;
-}
-@media screen and (max-width: 900px) {
-  .testimonial-container {
-    flex-direction: column;
-  }
-}
 .testimonial-photo {
   background-image: url("/img/testimonials/lucy-large.png");
   background-size: cover;
@@ -537,6 +559,8 @@ section.testimonials h1 {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0rem;
+    width: 100%;
+    margin-bottom: 1px;
   }
 }
 .testimonial-text {

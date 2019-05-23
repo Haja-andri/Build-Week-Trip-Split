@@ -14,18 +14,17 @@ steps.forEach(step => {
     // Add an eventlistner for mouse over
     step.addEventListener('mouseover', ()=>{
         updateIllus(currentStep);
+        //currentSpan.style.color = '#fff';
     });
 
 })
 
 function updateIllus(currentStep){
-    //console.log (`Went over ${currentStep}`);
     // get the list of images
     let images = document.querySelectorAll('.illustration.steps img') 
     images.forEach(img =>{
         img.classList.remove('show');
     })
-    let illusStep = document.querySelector(`[data-step="${currentStep}"]`);
-    //illusStep.classList.add('show');    
+    let illusStep = document.querySelector(`[data-step="${currentStep}"]`);   
     illusStep.classList.add('show');
 }

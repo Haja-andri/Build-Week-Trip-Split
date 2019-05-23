@@ -203,6 +203,10 @@ html, body {
   }
 }
 
+.line {
+  height: 1px;
+}
+
 button {
   background-color: coral;
   padding: 1rem 3rem;
@@ -224,7 +228,7 @@ button {
     width: 40%;
     span {
       padding-right: .5rem;
-      color: coral;
+      color: #ff7f50;
     }
     p {
       padding-bottom: 2.2rem;
@@ -257,7 +261,38 @@ button {
         }       
     }    
   }
+}
 
+.overflow {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+
+  .testimonial-container {
+    flex-shrink: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    width: 100%;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }  
+      
+
+    &.testimonial-container:not(:last-of-type) {
+      margin-right: 12px;
+    }
+  }
+  
+  &::after {
+    content: '';
+    flex: 0 0 12px; 
+  }
 }
 
 .row.hide {
@@ -326,14 +361,6 @@ section.testimonials {
     color: lightgoldenrodyellow;
   }
 }
-.testimonial-container {
-  display: flex;
-  border-radius: .8rem;
-  max-width: 90%;
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-  }  
-}
 
 .testimonial-photo {
   background-image: url("/img/testimonials/lucy-large.png"); 
@@ -347,6 +374,8 @@ section.testimonials {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0rem;
+    width: 100%;
+    margin-bottom: 1px;
     }    
 }
 
