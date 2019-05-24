@@ -51,7 +51,15 @@ button {
   justify-content: space-around;
   padding-top: 3rem;
   align-items: center;
-
+  @media screen and (max-width: 480px) {
+    h2 {
+      padding-left: 3rem;
+      padding-bottom: 1rem;
+      text-align: left;
+      font-size: 2rem;
+    }
+  }      
+  
   .description, .illustration {
     width: 40%;
     span {
@@ -60,6 +68,12 @@ button {
     }
     p {
       padding-bottom: 2.2rem;
+    }
+    .step p {
+      @media screen and (max-width: 480px) {
+          text-align: left;
+          display: none;  
+      }      
     }
   }
 
